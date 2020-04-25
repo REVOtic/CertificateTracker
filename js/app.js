@@ -110,9 +110,11 @@ function chooseFile() {
             if(!error) {
                 fileIPFSHash = ipfsHash[0].hash;
                 console.log("Upload to IPFS Succssful. Hash: " +fileIPFSHash);
+                alert("Upload to IPFS Succssful. Hash: " +fileIPFSHash+ "\nYou can now Proceed with the Ethereum Tx!");
             }
             else {
                 console.log("Error in Uploading to IPFS: " +error);
+                alert("Upload to IPFS Unsuccssful. Please Retry!");
             }
         });
     }
